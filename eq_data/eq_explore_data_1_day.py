@@ -15,19 +15,15 @@ all_eq_data = json.loads(contents)
 # Examine all earthquakes in the dataset
 all_eq_dicts = all_eq_data["features"]
 
-mags, longs, lats = [], [], []
-for eq_dict in all_eq_dicts:
-    mag = eq_dict["properties"]["mag"]
-    long = eq_dict["geometry"]["coordinates"][0]
-    lat = eq_dict["geometry"]["coordinates"][1]
-    mags.append(mag)
-    longs.append(long)
-    lats.append(lat)
-
+mags, longs, lats = (
+    [eq_dict["properties"]["mag"] for eq_dict in all_eq_dicts],
+    [eq_dict["geometry"]["coordinates"][0] for eq_dict in all_eq_dicts],
+    [eq_dict["geometry"]["coordinates"][1] for eq_dict in all_eq_dicts],
+)
 # print(mags[:10])
 # print(longs[:5])
 # print(lats[:5])
 title = "Global Earthquakes"
-fig = px.scatter_geo(lat=lats, lon=longs, title=title)
+fig = px.scatter_geo(lat=lats, lon=longs, title=title, size=mags)
 
 fig.show()

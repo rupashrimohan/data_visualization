@@ -14,18 +14,12 @@ eq_data_30 = json.loads(contents)
 
 # Extract magnitude, longitiude and latitude info
 eq_data_dict = eq_data_30["features"]
-mags, longs, lats, eq_titles = [], [], [], []
-for each_eq in eq_data_dict:
-    mag = each_eq["properties"]["mag"]
-    long = each_eq["geometry"]["coordinates"][0]
-    lat = each_eq["geometry"]["coordinates"][1]
-    eq_title = each_eq["properties"]["title"]
-
-    mags.append(mag)
-    longs.append(long)
-    lats.append(lat)
-    eq_titles.append(eq_title)
-
+mags, longs, lats, eq_titles = (
+    [each_eq["properties"]["mag"] for each_eq in eq_data_dict],
+    [each_eq["geometry"]["coordinates"][0] for each_eq in eq_data_dict],
+    [each_eq["geometry"]["coordinates"][1] for each_eq in eq_data_dict],
+    [each_eq["properties"]["title"] for each_eq in eq_data_dict],
+)
 # create a geo map
 title = "Global Earthquakes"
 fig = px.scatter_geo(
