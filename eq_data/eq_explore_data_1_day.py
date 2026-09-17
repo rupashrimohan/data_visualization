@@ -8,7 +8,7 @@ contents = path.read_text(encoding="utf-8")
 all_eq_data = json.loads(contents)
 
 # # Create more reading version of json file
-# path = Path("eq_data/readable_eq_data.geojson")
+# path = Path("eq_data/readable_eq_data_1_day.geojson")
 # readable_contents = json.dumps(all_eq_data, indent=4)
 # path.write_text(readable_contents)
 
