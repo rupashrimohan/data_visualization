@@ -23,7 +23,7 @@ mags, longs, lats = (
 # print(mags[:10])
 # print(longs[:5])
 # print(lats[:5])
-title = "Global Earthquakes"
+title = all_eq_data["metadata"]["title"]
 fig = px.scatter_geo(lat=lats, lon=longs, title=title, size=mags)
 
 fig.show()

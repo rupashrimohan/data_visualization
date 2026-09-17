@@ -21,7 +21,7 @@ mags, longs, lats, eq_titles = (
     [each_eq["properties"]["title"] for each_eq in eq_data_dict],
 )
 # create a geo map
-title = "Global Earthquakes"
+title = eq_data_30["metadata"]["title"]
 fig = px.scatter_geo(
     lat=lats,
     lon=longs,
