@@ -7,17 +7,22 @@ Also, learned how to access data from online sources and feed it into a visualiz
 Finally to automatically download and visualize data and learning to make visualzations allows to explore the field of data science.
 
 ## Project Structure
+### Web APIs
+* **`api/`** — Live REST API integrations (GitHub & Hacker News) + Pytest 
 
+### Data Visualization & Charts
+* **`squares_pyplot/`** — Basic mathematical plotting and square number progressions
+* **`prcp_pyplot/`** — Precipitation data visualization using Matplotlib
+* **`random_walk_pyplot/`** — Visualizing 2D stochastic random walks with Matplotlib
 
-* api/                     # Live REST API integrations (GitHub & Hacker News) + Pytest 
-* dice_plotly/             # Probability simulations rolling multi-sided dice (D6, D10)
-* eq_data/                 # Global earthquake activity mapped from GeoJSON datasets
-* prcp_pyplot/             # Precipitation data visualization using Matplotlib
-* random_walk_pyplot/      # Visualizing 2D stochastic random walks with Matplotlib
-* squares_pyplot/          # Basic mathematical plotting and square number progressions
-* weather_data_alaska/     # High/low temperature trends from Sitka, Alaska NOAA datasets
-* weather_data_california/ # Precipitation and weather patterns from Death Valley, California NOAA  datasets
-* world_fires/             # Visualizing global wildfire activity and brightness using Plotly scatter maps
+### Maps & Global Data
+* **`eq_data/`** — Global earthquake activity mapped from GeoJSON datasets
+* **`world_fires/`** — Visualizing global wildfire activity and brightness using Plotly scatter maps
+* **`weather_data_alaska/`** — High/low temperature trends from Sitka, Alaska NOAA datasets
+* **`weather_data_california/`** — Precipitation and weather patterns from Death Valley, California NOAA datasets
+
+### Simulations
+* **`dice_plotly/`** — Probability simulations rolling multi-sided dice (D6, D10)
 
 ## Installation and Setup
 To run this project locally, install the packages via 
